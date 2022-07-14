@@ -24,5 +24,11 @@ let package = Package(
         .testTarget(
             name: "StringHelperPackageTests",
             dependencies: ["StringHelperPackage"]),
+        platforms: [
+            SupportedPlatform.iOS(.v15),
+            SupportedPlatform.macOS(.v12),
+            SupportedPlatform.watchOS(.v7),
+            SupportedPlatform.tvOS(.v15)
+        ],
     ]
 )
