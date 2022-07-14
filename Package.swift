@@ -20,15 +20,15 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "StringHelperPackage",
-            dependencies: []),
+            dependencies: [],
+            platforms: [
+                SupportedPlatform.iOS(.v15),
+                SupportedPlatform.macOS(.v12),
+                SupportedPlatform.watchOS(.v7),
+                SupportedPlatform.tvOS(.v15)
+            ]),
         .testTarget(
             name: "StringHelperPackageTests",
             dependencies: ["StringHelperPackage"]),
-        platforms: [
-            SupportedPlatform.iOS(.v15),
-            SupportedPlatform.macOS(.v12),
-            SupportedPlatform.watchOS(.v7),
-            SupportedPlatform.tvOS(.v15)
-        ],
     ]
 )
