@@ -3,11 +3,7 @@ import XCTest
 
 final class StringHelperPackageTests: XCTestCase {
     func testExample() {
-        XCTAssertEqual(StringHelperPackage().localizedString("Hello, World!"), "Hello, World!")
-        XCTAssertEqual(StringHelperPackage().joinAttributedStrings(
-            NSAttributedString(string: "Hello, "),
-            NSAttributedString(string: "World!"))
-            .string, "Hello, World!")
+        XCTAssertEqual(StringHelperPackage().greetings("Jesus"), "Hello, Jesus!!!")
     }
 
     static var allTests = [
